@@ -13,6 +13,8 @@
             binarysearch.Insert(70);
             binarysearch.Display();
             binarysearch.GetSize();
+            bool result = binarysearch.IfExists(30, binarysearch);
+            Console.WriteLine(result);
 
         }
     }

@@ -65,5 +65,33 @@ namespace BinaryTree
         {
             Console.WriteLine("Size" + " " + (1 + this.leftCount + this.rightCount));
         }
+        public bool IfExists(T element, Binary<T> node)
+        {
+            if (node == null)
+            {
+                return false;
+            }
+            if (node.NodeData.Equals(element))
+            {
+                Console.WriteLine("element is found: " + "" + node.NodeData);
+                return true;
+            }
+            else
+            {
+                Console.WriteLine("Current element is: " + "" + node.NodeData);
+            }
+            if (element.CompareTo(node.NodeData) < 0)
+            {
+                IfExists(element, node.Left);
+
+            }
+            if (element.CompareTo(node.NodeData) > 0)
+            {
+                IfExists(element, node.Right);
+
+            }
+            return result;
+
+        }
     }
 }
